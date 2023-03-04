@@ -1,0 +1,10 @@
+[Unit]
+Description=Paperless job processing scheduler
+Requires=paperless-task-queue.service
+
+[Service]
+WorkingDirectory=%h/paperless-ngx
+ExecStart=%h/paperless-ngx/paperless-scheduler.sh
+
+[Install]
+WantedBy=multi-user.target

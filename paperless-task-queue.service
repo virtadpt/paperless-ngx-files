@@ -1,0 +1,10 @@
+[Unit]
+Description=Paperless Celery Workers
+Requires=paperless-webserver.service
+
+[Service]
+WorkingDirectory=%h/paperless-ngx
+ExecStart=%h/paperless-ngx/paperless-task-queue.sh
+
+[Install]
+WantedBy=multi-user.target

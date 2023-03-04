@@ -1,0 +1,11 @@
+[Unit]
+Description=Paperless webserver
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+WorkingDirectory=%h/paperless-ngx/
+ExecStart=%h/paperless-ngx/paperless-webserver.sh
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Paperless consumer
+Requires=paperless-webserver.service
+
+[Service]
+WorkingDirectory=%h/paperless-ngx
+ExecStart=%h/paperless-ngx/paperless-consumer.sh
+
+[Install]
+WantedBy=multi-user.target
