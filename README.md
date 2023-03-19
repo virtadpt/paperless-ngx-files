@@ -1,6 +1,11 @@
 Copy the shell scripts and `paperless.conf` file into your `paperless-ngx/` installation directory.  Edit `paperless.conf` and set the PAPERLESS_DB* options appropriately.  Change every instance of the string 'your-hostname-here' to the hostname of the machine you installed paperless-ngx on.  Set PAPERLESS_NLTK_DIR to the full path to your [NLTK data](https://www.nltk.org/data.html) directory (by default, `/home/your-username-here/nltk_data`).
 
+Patch the __/etc/ImageMagick-6/policy.xml__ file:
+* `cd /etc/ImageMagick-6`
+* `sudo patch < /path/to/paperless-ngx-files/policy.xml.diff`
+
 Install the helper shell scripts:
+* `cd /path/to/paperless-ngx-files`
 * `cp *.sh /path/to/paperless-ngx`
 
 Install the systemd .service files:
