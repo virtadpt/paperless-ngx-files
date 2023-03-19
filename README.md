@@ -4,6 +4,10 @@ Patch the __/etc/ImageMagick-6/policy.xml__ file:
 * `cd /etc/ImageMagick-6`
 * `sudo patch < /path/to/paperless-ngx-files/policy.xml.diff`
 
+Install the NLTK pre-trained models if you haven't already:
+* `. path/to/paperless-ngx/env/bin/activate`
+* `./install_nltk.py`
+
 Install the helper shell scripts:
 * `cd /path/to/paperless-ngx-files`
 * `cp *.sh /path/to/paperless-ngx`
